@@ -91,6 +91,7 @@ Preferences::Load(const char* filename)
 	fLineHighlighting = storage.GetBool("lineHighlighting", true);
 	fLineHighlightingMode = storage.GetUInt8("lineHighlightingMode", 0);
 	fLineNumbers = storage.GetBool("lineNumbers", true);
+	fBoldFoldMarkers = storage.GetBool("boldFoldMarkers", false);
 	fFoldMargin = storage.GetBool("foldMargin", true);
 	fBookmarkMargin = storage.GetBool("bookmarkMargin", true);
 	fChangeMargin = storage.GetBool("changeMargin", true);
@@ -136,6 +137,7 @@ Preferences::Save(const char* filename)
 	storage.AddBool("lineHighlighting", fLineHighlighting);
 	storage.AddUInt8("lineHighlightingMode", fLineHighlightingMode);
 	storage.AddBool("lineNumbers", fLineNumbers);
+	storage.AddBool("boldFoldMarkers", fBoldFoldMarkers);
 	storage.AddBool("foldMargin", fFoldMargin);
 	storage.AddBool("bookmarkMargin", fBookmarkMargin);
 	storage.AddBool("changeMargin", fChangeMargin);
@@ -181,6 +183,7 @@ Preferences::operator =(Preferences& p)
 	fLineHighlighting = p.fLineHighlighting;
 	fLineHighlightingMode = p.fLineHighlightingMode;
 	fLineNumbers = p.fLineNumbers;
+	fBoldFoldMarkers = p.fBoldFoldMarkers;
 	fFoldMargin = p.fFoldMargin;
 	fBookmarkMargin = p.fBookmarkMargin;
 	fChangeMargin = p.fChangeMargin;
